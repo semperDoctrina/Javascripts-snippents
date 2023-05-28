@@ -1,0 +1,89 @@
+A student is creating a list of electronics items he wants to buy with decreasing priority(highest priority item at 0 index).
+Electronics=['Mobile', 'Watch', 'Kindle']. 
+But due to college requirements, he wants to keep a certain item as his first priority. 
+Can you add that item at the start to create a new priority list using the spread operator?
+-----------------------------------------------------------solution--------------------------------------------------------------------
+function newPriorityList(item) {
+    var Electronics=['Mobile', 'Watch', 'Kindle'];
+    // write your code here
+    
+    return (item, ...Electronics)
+}
+
+
+// Input and output has already been handled for you
+
+process.stdin.resume();
+process.stdin.setEncoding("utf-8");
+
+let remainder = '';
+process.stdin.on('data', function (chunk) {
+    var ans=newPriorityList(chunk);
+    for(var i=0; i<ans.length; i++)
+    {
+        process.stdout.write(ans[i]+'\n');
+    }
+    process.exit();
+});
+---------------------------------------------------------------------------------------------------------EXPLANATION-------------------------------
+
+Certainly! Let's break down the code step by step:
+
+```javascript
+function newPriorityList(item) {
+    var Electronics = ['Mobile', 'Watch', 'Kindle'];
+    // write your code here
+    
+    return (item, ...Electronics);
+}
+```
+
+The code defines a function `newPriorityList` that takes an `item` as a parameter. Inside the function, there is an array called `Electronics` containing the initial list of electronics items.
+
+To create a new priority list, we need to add the `item` parameter at the start of the `Electronics` array. Let's update the code accordingly:
+
+```javascript
+function newPriorityList(item) {
+    var Electronics = ['Mobile', 'Watch', 'Kindle'];
+    var priorityList = [item, ...Electronics];
+    
+    return priorityList;
+}
+```
+
+In the updated code, we create a new array called `priorityList` that includes the `item` parameter at the start, 
+followed by the spread operator `...` to add all the elements from the `Electronics` array.
+
+Next, the program handles input and output using standard input and output streams:
+
+```javascript
+process.stdin.resume();
+process.stdin.setEncoding("utf-8");
+
+let remainder = '';
+process.stdin.on('data', function (chunk) {
+    var ans = newPriorityList(chunk);
+    for (var i = 0; i < ans.length; i++) {
+        process.stdout.write(ans[i] + '\n');
+    }
+    process.exit();
+});
+```
+
+The `process.stdin.resume()` and `process.stdin.setEncoding("utf-8")` lines are used to set up the standard input stream and specify the encoding.
+
+The `process.stdin.on('data', function (chunk) { ... })` block is an event listener that listens for data input on the standard input stream.
+When data is received, it executes the provided callback function.
+
+Inside the callback function, the input data is passed as the `chunk` parameter. 
+The `newPriorityList` function is called with the `chunk` parameter to create the new priority list. 
+The resulting array is stored in the `ans` variable.
+
+Finally, a loop iterates over the `ans` array and writes each element to the standard output using `process.stdout.write()`. 
+The `+ '\n'` is used to add a newline character after each element.
+
+At the end of the callback function, `process.exit()` is called to terminate the program.
+
+To summarize, the `newPriorityList` function creates a new priority list by adding the provided `item` parameter at the start of the `Electronics` array using the spread operator. 
+The program handles input from the standard input stream, calls the `newPriorityList` function with the provided input,
+and writes the resulting priority list to the standard output stream.

@@ -1,0 +1,20 @@
+Block Scoping
+Send Feedback
+What will be the output of the following code?
+
+let x = 42;
+if (true) {
+console.log(x);
+let x = 1337;
+}
+
+-----------------------------------------------------------------------------------------
+Options
+42
+1337
+Error
+undefined
+--------------------------------------------------------------------------------------
+Solution Description
+ANSWER: Error
+Variables defined with let are available only in the nearest enclosing block.

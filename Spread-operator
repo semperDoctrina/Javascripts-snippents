@@ -1,0 +1,20 @@
+Spread operator, map
+--------------------------------------------------------------------------------------------------------------------------
+What is the final value of array below?
+
+var array = [1, 2, 3]
+const array1 = [4, 5, 6]
+var arr1 = array.map(a => a * 2);
+
+array = [...array1, ...arr1]
+-----------------------------------------------------------------------------------------------------------------------------------
+Options
+This problem has only one correct answer
+[4,5,6,2,4,6]
+[1,2,3,4,5,6]
+[4,5,6,1,2,3]
+[2,4,6,4,5,6]
+-----------------------------------------------------------------------------------------------------------------------
+ANSWER:[4,5,6,2,4,6]
+Solution Description
+First, each element of the array is getting multiplied by 2 and then the concatenation of 2 arrays is taking place.

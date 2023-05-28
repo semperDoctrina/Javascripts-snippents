@@ -1,0 +1,19 @@
+Rest Operator
+---------------------------------------------------------------------------------------------------------------
+What is the output of the following code?
+function foo(x, ...y) {
+   return x * y.length
+}
+foo(4,1,2,30);
+-----------------------------------------------------------------------------------------------------------------------
+Options
+This problem has only one correct answer
+0
+3
+12
+16
+-------------------------------------------------------------------------------------------------------------
+ANSWER:12
+Solution Description
+Here, ..y is a rest parameter. Rest parameters are used to transform individual elements into an array and rest operators should be written at the end inside the function declaration. 
+So, value 4 is assigned to variable x and the rest (1,2,30) are passed as an array of length 3. So, answer is 12.

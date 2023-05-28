@@ -1,0 +1,19 @@
+Global Scoping
+----------------------------------------------------------------------------------------------------
+Guess the Output:
+const KEY = 'coding_ninjas';
+if (true) {
+    const KEY = 'ES6';
+}
+console.log(KEY);
+-----------------------------------------------------------------------------------------------
+Options
+This problem has only one correct answer
+ES6
+coding_ninjas
+undefined
+----------------------------------------------------------------------------------------------------------------------------------
+Answer:coding_ninjas
+Solution Description
+This declaration creates a constant whose scope can be either global or local to the block in which it is declared. 
+The scope of the inner KEY is only inside the "if" block. That's why the output is 'coding_ninjas.

@@ -1,0 +1,25 @@
+var student = { name:'varun',marks:50, subject:'maths'} #All the keys of the objects are strings and object in js is a key value pair .
+student.sem when #printed gives undefined as sem can be added dynamically 
+student.sem=4
+var student = { name:'varun',marks:50, subject:'maths',sem:4} #printed as js does not have fixed template
+#Javascript object is collection of - properties
+-----------------------------------------------------------------------------------------------------
+Two ways 2 create an object 
+1.var obj= new object()
+2.var obj={ };
+-----------------------------------------------------------------------------------------------------
+Dot Notation and [] notation 
+1.student.sem // output is 4 
+2.student["sem"] # we have to use "" otherwise this will search for variable sem which is not correct
+-------------------------------------------------------------------------------------------------------
+var student = { 
+name:'varun',
+marks:50, 
+subject:'maths'} 
+
+function printProperty(obj,prop){
+    console.log(obj[prop])
+
+}
+
+
